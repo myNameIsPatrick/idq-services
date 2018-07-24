@@ -1,0 +1,6 @@
+Bootstrap: docker
+From: confluentinc/cp-zookeeper:3.2.4
+
+% environment
+    ZOOKEEPER_DATA_DIR=/tmp/zookeeper
+    ZOOKEEPER_CLIENT_PORT=2271
