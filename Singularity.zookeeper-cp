@@ -1,6 +1,6 @@
 Bootstrap: docker
 From: confluentinc/cp-zookeeper:4.0.2
-Includecmd: yes
+Includecmd: no
 
 % environment
     export SINGULARITY_BINDPATH="/usr/lib/jvm/jre"
@@ -8,5 +8,5 @@ Includecmd: yes
     export ZOOKEEPER_CLIENT_PORT=2271
     export ZOOKEEPER_MAX_CLIENT_CNXNS=0
 
-#% startscript
-#    /etc/confluent/docker/run
+% startscript
+    /etc/confluent/docker/run
