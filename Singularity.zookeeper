@@ -1,0 +1,2 @@
+Bootstrap: docker
+From: wurstmeister/zookeeper:3.4.6
