@@ -5,3 +5,7 @@ From: confluentinc/cp-zookeeper:3.2.4
     ZOOKEEPER_DATA_DIR=/tmp/zookeeper
     ZOOKEEPER_CLIENT_PORT=2271
     export ZOOKEEPER_DATA_DIR ZOOKEEPER_CLIENT_PORT
+
+% post
+    echo 'export ZOOKEEPER_DATA_DIR=/tmp/zookeeper' >>$SINGULARITY_ENVIRONMENT
+    echo 'export ZOOKEEPER_CLIENT_PORT=2271' >>$SINGULARITY_ENVIRONMENT
