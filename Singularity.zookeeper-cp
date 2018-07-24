@@ -2,10 +2,10 @@ Bootstrap: docker
 From: confluentinc/cp-zookeeper:3.2.4
 
 % environment
-    ZOOKEEPER_DATA_DIR=/tmp/zookeeper
-    ZOOKEEPER_CLIENT_PORT=2271
-    export ZOOKEEPER_DATA_DIR ZOOKEEPER_CLIENT_PORT
+    export SINGULARITY_BINDPATH="/usr/lib/jvm/jre"
+    export ZOOKEEPER_DATA_DIR=/tmp/zookeeper
+    export ZOOKEEPER_CLIENT_PORT=2271
+    export ZOOKEEPER_MAX_CLIENT_CNXNS=0
 
-% post
-    echo 'export ZOOKEEPER_DATA_DIR=/tmp/zookeeper' >>$SINGULARITY_ENVIRONMENT
-    echo 'export ZOOKEEPER_CLIENT_PORT=2271' >>$SINGULARITY_ENVIRONMENT
+% startscript
+    /etc/confluent/docker/run
